@@ -2,7 +2,7 @@
 
 ## Welcome to the default guide for making OSFE mods.
 
-Quick note, If you know what you're doing/have modding experience: Super Quick Start Guide. If not, read on:
+Quick note, If you know what you're doing/have a good chunk of modding or programming experience, you might only need the Super Quick Guide and just refer to this if you need some specific detail. If you don't have said experience, read on:
 
 The Default Mod Base is an over-commented 'tutorial/start-from' mod for those wishing to make mods from more than a completely empty canvas, and less than a complicated, pre-existing mod with many parts. It also aims to explain/detail (near) every part of OSFE modding. It's also for those who just want to reference it's code while learning to mod OSFE from scratch (you can do that via the [Community Google Doc](https://docs.google.com/document/d/1UUzJ9vVBsSVATHjzDGdZrsVPzNhf8Iy_PfPWfkghUZI), and by referenceing the `OSFE_Data/StreamingAssets/Data` folder, as well as other mods).
 
@@ -38,6 +38,7 @@ Once you are ready to start, you can proceed to Step 1: Setting up!
 * DotPeek: https://www.jetbrains.com/decompiler/
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IE9TRkUgTW9kZGluZ1xuYX
-V0aG9yOiBHcmVtaW91c1xuIiwiaGlzdG9yeSI6Wy0xOTg5Mjk4
-NDcxLDE3Nzg5NDM1NzEsLTE1MjQ5MzEzOTddfQ==
+V0aG9yOiBHcmVtaW91c1xuIiwiaGlzdG9yeSI6Wy01NzA3MTI4
+NTgsLTE5ODkyOTg0NzEsMTc3ODk0MzU3MSwtMTUyNDkzMTM5N1
+19
 -->
