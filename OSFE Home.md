@@ -33,40 +33,8 @@ Once you are ready to start, you can proceed to Step 1: Setting up!
 * Visual Studio and Visual Studio Code: https://visualstudio.microsoft.com/ 
 
 * DotPeek: https://www.jetbrains.com/decompiler/
-
-# Files
-
-https://visualstudio.microsoft.com/
-![enter image description here](https://i.imgur.com/XYyirar.png)
-
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
-
-And this will produce a flow chart:
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IE9TRkUgTW9kZGluZ1xuYX
-V0aG9yOiBHcmVtaW91c1xuIiwiaGlzdG9yeSI6Wy0xNTI0OTMx
-Mzk3XX0=
+V0aG9yOiBHcmVtaW91c1xuIiwiaGlzdG9yeSI6WzE3Nzg5NDM1
+NzEsLTE1MjQ5MzEzOTddfQ==
 -->
