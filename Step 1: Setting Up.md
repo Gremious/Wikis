@@ -43,7 +43,7 @@ You're done with VSC! Next step: Git Repo!
 For C# you have 2 options for IDEs.
 Visual Studio Community Edition (Free always) or JetBrains Rider (free only if you have a student email). I personally recommend Rider, but obviously not everyone has access to it, and ether works fine.
 
-Regardless, first you'll need to get and install Visual Studio 4.5.2 from here:
+Regardless, first you'll need to get and install Net Framework 4.5.2 from here:
 https://www.microsoft.com/en-gb/download/details.aspx?id=42643
 
 Let's start with
