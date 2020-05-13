@@ -74,12 +74,17 @@ But, let's do some quick quality of life adjustments:
 Expands the Reference tab, select a reference you just added (say, 0Harmony) and then, below, in the properties tab, set Copy Local to be False. Do this for all the other references that it's True for (should be just the 3 you added).
 
 ![enter image description here](https://i.imgur.com/cXxvb2V.png)
+
 Then, right-click on the Library name (Not the solution above!) and select properties.
  
+ 
 ![enter image description here](https://i.imgur.com/1UkBw8C.png)
+
 Then, on the left side select "Build", and on the bottom - Output path. For the output path, select your mod folder.
 
+
 ![enter image description here](https://i.imgur.com/54VyEHA.png)
+
 What this will do is make it so that whenever we build our C# mod (patch), it'll just put the .dll inside the mod folder without anything extra, so we can instantly start the game and test it out!
 
 
