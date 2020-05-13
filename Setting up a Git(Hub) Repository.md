@@ -77,3 +77,8 @@ Then press the `...` button and press Push (or `git push` in the terminal) and p
 
 ![enter image description here](https://i.imgur.com/hN2t0hA.png)
 If you don't have a branch on GitHub, it'll ask you to create one, just press ok, login, and you're good to go! If it asks, running `git fetch` periodically is ok and will notify you if your local version is behind or something.
+
+
+### Rider
+
+
