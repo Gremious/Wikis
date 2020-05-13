@@ -96,18 +96,25 @@ Install it, open it, and enable dotCover and dotTrace too when it asks you for t
 
 Press New Solution; Select the second "Class Library", the one under .NET; Name it your mod name; Put it in the mods folder and select 4.5.2. as the framework.
 
+
 ![enter image description here](https://i.imgur.com/cx45Ejq.png)
+
 You should now have an open project. Expand the project in the explorer on the left, right-click the Dependencies and press "Add Reference..."
 
+
 ![enter image description here](https://i.imgur.com/Hl5NFKi.png)
+
 On the bottom right, press the "Add From..." button and find `Your OSFE Install Location\OSFE_Data\Managed`. Then, select `0Harmony.dll`, `Assembly-CSharp.dll` and `UnityEngine.dll`  (You can ctrl-click them or add them 1 by 1). You can add other libraries/referneces like this when your code calls for it. Press ok and then you are good to go!
+ 
  
 ![enter image description here](https://i.imgur.com/tTIc9ua.png)
 
 But, let's do some quick quality of life adjustments:
 Right-click on your solution in the explorer on the left, and go to edit -> "Edit SolutionName.csproj" (or just click the solution and press f4)
 
+
 ![enter image description here](https://i.imgur.com/LjX42hE.png)
+
 Scroll down until you see `<ItemGroup>`. 
 Then, for each reference, add a field that says `<Private>False</Private>`(This sets copylocal to false).
 You might need to expand some of the fields (e.g. turn  `<Reference Include="System"/>` into `<Reference Include="System"><Private>False</Private></Reference> ` )
