@@ -52,6 +52,7 @@ Let's start with
 https://visualstudio.microsoft.com/
 
 ![enter image description here](https://i.imgur.com/XYyirar.png)
+
 2. Click "Create a New Project"
 
 3. Type "dll" in the search box and select Class Library (.NET Framwork) with C# (third option).
@@ -65,7 +66,8 @@ https://visualstudio.microsoft.com/
 
 4. This should load up a project. (This is probably a good time to go find that dark theme setting.) Next, we need to add unity, harmony, and our game as libraries/referneces to be able to use them in code. On the right side, in the Solution Explorer, right-click "References" and select "Add Reference...".
  ![enter image description here](https://i.imgur.com/YZEqPwN.png)
-  On the bottom right, press the "Browse" button and find `Your OSFE Install Location\OSFE_Data\Managed`. Then, select `0Harmony.dll`, `Assembly-CSharp.dll` and `UnityEngine.dll`  (You can ctrl-click them or add them 1 by 1). You can add other libraries/referneces like this when your code calls for it. Press ok and then you are good to go! 
+ 
+ On the bottom right, press the "Browse" button and find `Your OSFE Install Location\OSFE_Data\Managed`. Then, select `0Harmony.dll`, `Assembly-CSharp.dll` and `UnityEngine.dll`  (You can ctrl-click them or add them 1 by 1). You can add other libraries/referneces like this when your code calls for it. Press ok and then you are good to go! 
 
 But, let's do some quick quality of life adjustments:
 Expands the Reference tab, select a reference you just added (say, 0Harmony) and then, below, in the properties tab, set Copy Local to be False. Do this for all the other references that it's True for (should be just the 3 you added).
