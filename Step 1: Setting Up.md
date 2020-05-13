@@ -65,6 +65,7 @@ https://visualstudio.microsoft.com/
 * Select `.NET Framework 4.5.2` as your framework.
 
 4. This should load up a project. (This is probably a good time to go find that dark theme setting.) Next, we need to add unity, harmony, and our game as libraries/referneces to be able to use them in code. On the right side, in the Solution Explorer, right-click "References" and select "Add Reference...".
+
  ![enter image description here](https://i.imgur.com/YZEqPwN.png)
  
  On the bottom right, press the "Browse" button and find `Your OSFE Install Location\OSFE_Data\Managed`. Then, select `0Harmony.dll`, `Assembly-CSharp.dll` and `UnityEngine.dll`  (You can ctrl-click them or add them 1 by 1). You can add other libraries/referneces like this when your code calls for it. Press ok and then you are good to go! 
