@@ -10,7 +10,7 @@ Of course, you could always copy those files over to a place you like and work t
 
 ## Lua Mods:   
 
-### Settings up an IDE (VSC)
+### Settings up an editor (VSC)
 For Lua modding you'll pribably have a repo and be editing different file types in 1 folder, while refering to files outside of it constantly. For this reason I will personally recommend using Visual Studio Code. It's great for managing multiple file extentions, multiple locations simultaniously, and editing things that don't necessarily have a big IDE.
 Keep in mind that **Visual Studio Code is NOT Visual Studio**. They are two very different applications. So:
 Grab VSC from [here](https://code.visualstudio.com/), Install it in a nice place where you keep your programs, and start it up.
@@ -33,6 +33,9 @@ Then go to File -> Add Folder to Workspace and `OSFE_Data\StreamingAssets\Data`.
 Cool, if you open up the explorer pane on the left, you should now be able to work on your mod while referencing the basegame data fairly easily. You can drag and drop the folders to re-arrange them. 
 
 Now just go to file -> Save Workspace As, and save it somewhere like your mod's folder. VSC will auto-load your last workspace at the start, but if you have multiple mods, workspaces are a nice way to manage them.
+
+Also, get DotPeek from https://www.jetbrains.com/decompiler/, install it, and open up
+`Your OSFE Install Location\OSFE_Data\Managed\Assembly-CSharp.dll`. Now you can browse the game's decompiled source-code for referncing anything. All the cool stuff is in root "`{}`", you'll have to expand that, or just use the searchbox.
 
 You're done with VSC! Next step: Git Repo!
  
@@ -73,4 +76,56 @@ Then, right-click on the Library name (Not the solution above!) and select prope
 Then, on the left side select "Build", and on the bottom - Output path. For the output path, select your mod folder.
 
 ![enter image description here](https://i.imgur.com/54VyEHA.png)
-What this will will do is make it so that whenever we build our C# mod (patch), it'll just put the .dll inside the mod folder without anything extra, so we can instantly start the game and test it out!
+What this will do is make it so that whenever we build our C# mod (patch), it'll just put the .dll inside the mod folder without anything extra, so we can instantly start the game and test it out!
+
+
+### Rider:
+
+Get JetBrains Rider from ether via the toolbox app if you use other JetBrains apps (https://www.jetbrains.com/toolbox-app/) or as a standalone (https://www.jetbrains.com/rider/ ) and install it. If you are a student, getting a year free of jetbrains is as easy as giving them your university email and clicking a link. Just go here: https://www.jetbrains.com/community/education/#students, press Apply Now (for Students and Teachers) and give him the details. A link will be insta-sent to your email.
+
+Install it, open it, and enable dotCover and dotTrace too when it asks you for the license. (I appologize in advance for accidentally not using the dark theme for the screencaps).
+
+Press New Solution; Select the second "Class Library", the one under .NET; Name it your mod name; Put it in the mods folder and select 4.5.2. as the framework.
+
+![enter image description here](https://i.imgur.com/cx45Ejq.png)
+You should now have an open project. Expand the project in the explorer on the left, right-click the Dependencies and press "Add Reference..."
+
+![enter image description here](https://i.imgur.com/Hl5NFKi.png)
+On the bottom right, press the "Add From..." button and find `Your OSFE Install Location\OSFE_Data\Managed`. Then, select `0Harmony.dll`, `Assembly-CSharp.dll` and `UnityEngine.dll`  (You can ctrl-click them or add them 1 by 1). You can add other libraries/referneces like this when your code calls for it. Press ok and then you are good to go!
+ 
+![enter image description here](https://i.imgur.com/tTIc9ua.png)
+
+But, let's do some quick quality of life adjustments:
+Right-click on your solution in the explorer on the left, and go to edit -> "Edit SolutionName.csproj" (or just click the solution and press f4)
+
+![enter image description here](https://i.imgur.com/LjX42hE.png)
+Scroll down until you see `<ItemGroup>`. 
+Then, for each reference, add a field that says `<Private>False</Private>`(This sets copylocal to false).
+You might need to expand some of the fields (e.g. turn  `<Reference Include="System"/>` into `<Reference Include="System"><Private>False</Private></Reference> ` )
+But you can just copy-paste most of it from here, as it should look something like this (though do double-check the paths and all that):
+
+```xml
+<ItemGroup>  
+ <Reference Include="0Harmony, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">  
+ <HintPath>..\packages\Lib.Harmony.2.0.0.9\lib\net45\0Harmony.dll</HintPath>  
+ <Private>False</Private>  
+ </Reference>  
+ <Reference Include="Assembly-CSharp">  
+ <HintPath>..\..\..\..\Managed\Assembly-CSharp.dll</HintPath>  
+ <Private>False</Private>  
+ </Reference>  
+ <Reference Include="System"><Private>False</Private></Reference>  
+ <Reference Include="System.Core"><Private>False</Private></Reference>  
+ <Reference Include="System.Xml.Linq"><Private>False</Private></Reference>  
+ <Reference Include="System.Data.DataSetExtensions"><Private>False</Private></Reference>  
+ <Reference Include="System.Data"><Private>False</Private></Reference>  
+ <Reference Include="System.Xml"><Private>False</Private></Reference>  
+ <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">  
+ <HintPath>..\..\..\..\Managed\UnityEngine.dll</HintPath>  
+ </Reference>   
+</ItemGroup>
+```
+
+Finally, Right-click on your solution again and press Properties. In "Debug | Any CPU" set the output path to be your mod fodler. Keep in mind that if you put this C# Project inside your mod folder already, you might just need to put  `..\..\` as the path (which translates to "go back 2 folders)".
+
+What this will do is make it so that whenever we build our C# mod (patch), it'll just put the .dll inside the mod folder without anything extra, so we can instantly start the game and test it out!
