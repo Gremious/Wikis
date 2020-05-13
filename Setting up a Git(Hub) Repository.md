@@ -39,10 +39,10 @@ You can also select a different text editor for git related files (like notepad+
 
 ![enter image description here](https://i.imgur.com/DvfST3I.png)
 
-3. Name it something nice like OSFE-YourModName or some such
-4. Make it public or private as you wish. Keep in mind that making it private will prevent you from sharing your code on github with others if you want help.
-5. We'll manually add a .gitignore cause this project is a little unique.
-6. Add a lisence, if you wish. MIT is a good for mods, and translates to "everyone can use this but it has to be MIT too". 
+2. Name it something nice like OSFE-YourModName or some such
+3. Make it public or private as you wish. Keep in mind that making it private will prevent you from sharing your code on github with others if you want help.
+4. We'll manually add a .gitignore cause this project is a little unique.
+5. Add a lisence, if you wish. MIT is a good for mods, and translates to "everyone can use this but it has to be MIT too". 
 
 In VSC, open the Source Control tab on the left (3 dots connected via lines). (If you don't see some of the tabs you need, just right-click the tab bar).
 
