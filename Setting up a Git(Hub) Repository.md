@@ -36,7 +36,7 @@ You can also select a different text editor for git related files (like notepad+
 
 #### Step 0: Create a GitHub repository
 1. Press the plus button at the top right, and press New repository
-2. 
+
 ![enter image description here](https://i.imgur.com/DvfST3I.png)
 
 3. Name it something nice like OSFE-YourModName or some such
